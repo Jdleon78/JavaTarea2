@@ -51,39 +51,43 @@ public class EjerciciosJavaJanethChuy {
         }
     }
 
-    // Ejercicio 5: Imprimir los números del 1 al 20 en orden ascendente
+       // Ejercicio 5: Imprimir los números del 1 al 20 en orden ascendente utilizando un bucle while
     public void imprimirNumerosDel1Al20() {
-        for (int i = 1; i <= 20; i++) {
+        int i = 1;
+        while (i <= 20) {
             System.out.print(i + " ");
+            i++;
         }
         System.out.println();
     }
 
-    // Ejercicio 6: Imprimir números desde 1 hasta el número ingresado
+    // Ejercicio 6: Imprimir números desde 1 hasta el número ingresado utilizando un bucle while
     public void imprimirNumerosHasta(int numero) {
-        for (int i = 1; i <= numero; i++) {
+        int i = 1;
+        while (i <= numero) {
             System.out.print(i + " ");
+            i++;
         }
         System.out.println();
     }
 
-    // Ejercicio 7: Sumar números positivos hasta ingresar un número negativo
+    // Ejercicio 7: Sumar números positivos hasta ingresar un número negativo utilizando un bucle while
     public void sumarNumerosPositivos() {
         Scanner scanner = new Scanner(System.in);
         int suma = 0;
-        int num;
-        do {
+        int num = 0; // Inicializar num con un valor para ingresar al bucle
+        while (num >= 0) {
             System.out.print("Ingrese un número positivo (o un negativo para detenerse): ");
             num = scanner.nextInt();
             if (num >= 0) {
                 suma += num;
             }
-        } while (num >= 0);
+        }
         System.out.println("La suma de los números positivos ingresados es: " + suma);
     }
 
-    // Ejercicio 8: Generar la secuencia de Fibonacci hasta un número ingresado
-      public void generarFibonacciHasta(int limite) {
+    // Ejercicio 8: Generar la secuencia de Fibonacci hasta un número ingresado utilizando un bucle while
+    public void generarFibonacciHasta(int limite) {
         int previo = 0;
         int actual = 1;
         System.out.print(previo + " " + actual + " ");
@@ -95,7 +99,8 @@ public class EjerciciosJavaJanethChuy {
             siguiente = previo + actual;
         }
         System.out.println();
-    } 
+    }
+
        // Ejercicio 9: Imprimir números pares del 2 al 20
     public void imprimirNumerosParesDel2Al20() {
         for (int i = 2; i <= 20; i += 2) {
